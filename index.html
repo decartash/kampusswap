@@ -1084,6 +1084,89 @@ footer {
   nav .nav-links { display: none; }
   .hero h1 { font-size: 2.6rem; }
 }
+
+@media (max-width: 600px) {
+  /* NAV */
+  nav { padding: 0.85rem 1.2rem; }
+  .nav-right .btn-outline { display: none; }
+  .btn-solid { padding: 0.45rem 0.9rem; font-size: 0.78rem; }
+
+  /* ANNOUNCE */
+  .announce { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+
+  /* HERO */
+  .hero { padding: 2rem 1.2rem 1.5rem; gap: 1.5rem; }
+  .hero-eyebrow { font-size: 0.68rem; padding: 0.25rem 0.7rem; }
+  .hero h1 { font-size: 2rem; letter-spacing: -0.5px; }
+  .hero-desc { font-size: 0.88rem; }
+  .hero-actions { flex-direction: column; gap: 0.6rem; }
+  .hero-actions .btn-lg { width: 100%; text-align: center; padding: 0.85rem; }
+  .hero-stats { gap: 1.5rem; margin-top: 1.5rem; }
+  .hstat .n { font-size: 1.5rem; }
+
+  /* SEARCH */
+  .hero-search { margin-top: 1.5rem; }
+  .search-wrap { flex-direction: column; border-radius: 10px; }
+  .search-tabs { border-right: none; border-bottom: 1px solid var(--border); overflow-x: auto; }
+  .stab { padding: 0.7rem 0.9rem; font-size: 0.75rem; white-space: nowrap; }
+  .search-input { padding: 0.75rem 1rem; font-size: 0.85rem; }
+  .search-go { padding: 0.75rem; border-radius: 0 0 10px 10px; font-size: 0.85rem; }
+  .search-tags { gap: 0.4rem; }
+  .stag { font-size: 0.7rem; padding: 0.2rem 0.6rem; }
+
+  /* SECTIONS */
+  .section { padding: 1.5rem 1.2rem; }
+
+  /* FILTER */
+  .filter-row { gap: 0.4rem; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 0.3rem; }
+  .filter-row::-webkit-scrollbar { display: none; }
+  .fchip { font-size: 0.75rem; padding: 0.35rem 0.8rem; white-space: nowrap; flex-shrink: 0; }
+
+  /* PRODUCT GRID */
+  .pgrid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .pimg { height: 110px; font-size: 2.2rem; }
+  .ptitle { font-size: 0.8rem; }
+  .pmeta { font-size: 0.68rem; }
+  .pprice { font-size: 0.88rem; }
+
+  /* SEC HEADER */
+  .sec-head { align-items: flex-start; flex-direction: column; gap: 0.3rem; }
+  .sec-title { font-size: 1.2rem; }
+
+  /* REQUEST SECTION */
+  .request-section { padding: 2.5rem 1.2rem; }
+  .request-inner { gap: 2rem; }
+  .req-title { font-size: 1.8rem; }
+  .req-input { padding: 0.75rem 0.9rem; font-size: 0.83rem; }
+  .rreq-item { padding: 0.75rem 0.9rem; }
+  .rreq-name { font-size: 0.8rem; }
+  .rreq-info { font-size: 0.68rem; }
+
+  /* CHAT SECTION */
+  .chat-section { padding: 2.5rem 1.2rem; }
+  .chat-inner { gap: 2rem; }
+  .chat-title { font-size: 1.8rem; }
+  .chat-desc { font-size: 0.83rem; }
+  .cmsg { font-size: 0.78rem; }
+
+  /* HOW IT WORKS */
+  .how-section { padding: 2.5rem 1.2rem; }
+  .steps { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .step { padding: 1.2rem 1rem; }
+  .step h3 { font-size: 0.82rem; }
+  .step p { font-size: 0.72rem; }
+  .step-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .step-n { width: 36px; height: 36px; font-size: 0.85rem; }
+
+  /* TRUST STRIP */
+  .trust-strip { gap: 1rem 1.5rem; padding: 1.2rem; justify-content: flex-start; flex-wrap: wrap; }
+  .titem { font-size: 0.75rem; }
+
+  /* FOOTER */
+  footer { padding: 2rem 1.2rem 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; padding-bottom: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.3rem; text-align: center; padding: 1rem 0; }
+}
 </style>
 </head>
 <body>
@@ -1264,10 +1347,10 @@ footer {
     <div>
       <span class="req-label">✋ Fitur Request</span>
       <h2 class="req-title">Nggak Nemu<br>yang Kamu <em>Cari?</em></h2>
-      <p class="req-desc">Tinggal posting request-mu. Mahasiswa lain yang punya barang tersebut akan langsung menghubungimu. Gratis dan mudah!</p>
+      <p class="req-desc">Tinggal posting request-mu. Mahasiswa lain yang punya buku tersebut akan langsung menghubungimu. Gratis dan mudah!</p>
       <div class="req-form">
-        <input class="req-input" type="text" placeholder="Nama buku / alat yang kamu cari...">
-        <input class="req-input" type="text" placeholder="Jurusan / Mata Kuliah (opsional)">
+        <input class="req-input" type="text" placeholder="Judul buku yang kamu cari...">
+        <input class="req-input" type="text" placeholder="Fakultas / Mata Kuliah (opsional)">
         <input class="req-input" type="text" placeholder="Budget maksimal (Rp)">
         <button class="req-btn">📣 Posting Request Gratis</button>
       </div>
@@ -1287,10 +1370,10 @@ footer {
         </div>
         <div class="rreq-item">
           <div class="rreq-left">
-            <div class="rreq-icon">🧮</div>
+            <div class="rreq-icon">📕</div>
             <div>
-              <div class="rreq-name">Casio FX-991EX</div>
-              <div class="rreq-info">Budget Rp 180.000 • Ekonomi Syariah</div>
+              <div class="rreq-name">Pengantar Ilmu Komunikasi</div>
+              <div class="rreq-info">Deddy Mulyana • Budget Rp 65.000 • Dakwah</div>
             </div>
           </div>
           <span class="rreq-badge">2 minat</span>
@@ -1307,13 +1390,13 @@ footer {
         </div>
         <div class="rreq-item">
           <div class="rreq-left">
-            <div class="rreq-icon">💻</div>
+            <div class="rreq-icon">📘</div>
             <div>
-              <div class="rreq-name">Laptop RAM 8GB untuk Skripsi</div>
-              <div class="rreq-info">Budget Rp 3.500.000 • Semua Jurusan</div>
+              <div class="rreq-name">Metodologi Penelitian Pendidikan</div>
+              <div class="rreq-info">Sugiyono • Budget Rp 80.000 • Tarbiyah</div>
             </div>
           </div>
-          <span class="rreq-badge">6 minat</span>
+          <span class="rreq-badge">5 minat</span>
         </div>
       </div>
     </div>
